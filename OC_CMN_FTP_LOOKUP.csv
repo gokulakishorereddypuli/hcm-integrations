@@ -1,0 +1,5 @@
+﻿DVM,OC_CMN_FTP_LOOKUP,,
+RICE_ID,sourceDirectory,targetDirectory,File_Format,FileName,vfs_directory,Domain_Name_7
+INT_IFY_IN_001,/htdocs/oracle/inbound/INT_IFY_IN_001/input,/htdocs/oracle/inbound/INT_IFY_IN_001/archive,*.csv,,,
+OC_SPB_OB_001,,/htdocs/oracle/outbound/OC_SPB_OB_001/archive,*.csv,Integration_logs,/OC_SPB_OB_001/logs/,
+OC_CRM_OB_001,,/htdocs/oracle/outbound/OC_CRM_OB_001/archive,,,,
