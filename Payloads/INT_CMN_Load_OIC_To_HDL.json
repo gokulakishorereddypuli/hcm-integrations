@@ -1,0 +1,57 @@
+{
+    "metadata": {
+        "parentProcessld": "1231231",
+        "sourceSystemName": "HCM",
+        "targetSystemName": "HCM",
+        "ricelD": "INT_PAY_OB_10",
+        "effectiveRunDate": "YYYY-MM-DD",
+        "integrationRunDate": "YYYY-MM-DD",
+        "skipExtract": "NO",
+        "skipPurge": "NO",
+        "skipFileDelivery": "NO",
+        "skipHDL": "NO",
+        "skipNotif": "NO",
+        "notifyTo": "email@address.com",
+        "parameters": [
+            {
+                "parameterName": "ParameterName",
+                "parameterValue": "ParameterValue"
+            }
+        ]
+    },
+    "data": {
+        "hdlProcessingParameters": "HDLParameters",
+        "executeRestIntegration": {
+            "invokeRestIntegration": "YES",
+            "IntegrationVersion": "01.00.0000",
+            "Integrationldentfier": "INT_PAY_OB_10"
+        },
+        "reconciliationRecords": {
+            "sourceFile TotalRecords": "10",
+            "hdlTotalRecords": "10",
+            "rejectedTotalRecords": "10"
+        },
+        "archiveDetails": {
+            "isIncluded": "YES",
+            "archivalFiles": "ArchivalFiles.txt",
+            "archivalPath": "/MI/DVS",
+            "PGPEncrypted": "YES"
+        },
+        "sourceDetails": {
+            "islncluded": "YES",
+            "sourceFiles": "SourceFiles.txt",
+            "sourcePath": "/MI/DVS",
+            "PGPEncrypted": "YES"
+        },
+        "rejectionDetails": {
+            "islncluded": "YES",
+            "rejectedFiles": "RejectedFiles.txt",
+            "rejectedFilePath": "/MI/DVS",
+            "PGPEncrypted": "YES"
+        },
+        "hdlLogDetails": {
+            "logsFiles": "HdlLogs.txt",
+            "logsFilePath": "/MI/DVS"
+        }
+    }
+}
