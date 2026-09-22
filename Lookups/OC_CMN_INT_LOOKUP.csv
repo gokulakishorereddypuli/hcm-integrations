@@ -1,0 +1,3 @@
+﻿DVM,OC_CMN_INT_LOOKUP,Lookup for common Integration Services,
+Integration_Identifier,File_Formats
+INT_CMN_LOAD_FILE_TO_UCM,text/csv|application/x-zip-compressed
