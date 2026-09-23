@@ -1,0 +1,89 @@
+<ns1:getDataSetStatusResponse xmlns:ns0="http://xmlns.oracle.com/apps/hcm/common/dataLoader/core/dataLoaderIntegrationService/types/" xmlns:ns1="http://xmlns.oracle.com/cloud/adapter/hcm/Invole_GetHDLImportStatus_REQUEST/types">
+  <DATA_SET_STATUS xmlns="http://xmlns.oracle.com/cloud/adapter/hcm/Invole_GetHDLImportStatus_REQUEST/types">
+    <RESULT_COUNT xmlns="http://xmlns.oracle.com/apps/hcm/common/dataLoader/core/dataLoaderIntegrationService/types/">1</RESULT_COUNT>
+    <DATA_SET xmlns="http://xmlns.oracle.com/apps/hcm/common/dataLoader/core/dataLoaderIntegrationService/types/">
+      ElementEntryWithCosting1.zip
+      UCMFA07872262
+      2026/09/23 18:42:00
+      COMPLETED
+
+      10012107
+      2026/09/23 18:41:47
+
+
+      SUCCESS
+      100
+
+      9
+      9
+      0
+      0
+
+
+
+      ERROR
+      100
+
+      9
+      0
+      9
+      0
+
+
+      <DATA_SET_NAME>ElementEntryWithCosting1.zip</DATA_SET_NAME>
+      <CONTENT_ID>UCMFA07872262</CONTENT_ID>
+      <CREATION_DATE>2026/09/23 18:42:00</CREATION_DATE>
+      <STATUS>COMPLETED</STATUS>
+      <PROCESS>
+        10012107
+        2026/09/23 18:41:47
+        <PROCESS_ID>10012107</PROCESS_ID>
+        <SUBMISSION_DATE>2026/09/23 18:41:47</SUBMISSION_DATE>
+      </PROCESS>
+      <IMPORT>
+        SUCCESS
+        100
+
+        9
+        9
+        0
+        0
+
+        <STATUS>SUCCESS</STATUS>
+        <PERCENTAGE_COMPLETE>100</PERCENTAGE_COMPLETE>
+        <DATA_LINE_COUNTS>
+          9
+          9
+          0
+          0
+          <TOTAL>9</TOTAL>
+          <SUCCESS>9</SUCCESS>
+          <FAILED>0</FAILED>
+          <UNPROCESSED>0</UNPROCESSED>
+        </DATA_LINE_COUNTS>
+      </IMPORT>
+      <LOAD>
+        ERROR
+        100
+
+        9
+        0
+        9
+        0
+
+        <STATUS>ERROR</STATUS>
+        <PERCENTAGE_COMPLETE>100</PERCENTAGE_COMPLETE>
+        <OBJECT_COUNT>
+          9
+          0
+          9
+          0
+          <TOTAL>9</TOTAL>
+          <SUCCESS>0</SUCCESS>
+          <FAILED>9</FAILED>
+          <UNPROCESSED>0</UNPROCESSED>
+        </OBJECT_COUNT>
+      </LOAD>
+    </DATA_SET>
+  </DATA_SET_STATUS>
+</ns1:getDataSetStatusResponse>
