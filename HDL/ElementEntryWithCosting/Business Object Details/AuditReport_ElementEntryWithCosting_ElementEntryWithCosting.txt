@@ -1,0 +1,546 @@
+================================================================================================================================= 
+Hierarchy Discriminator : ElementEntryWithCosting 
+Object Discriminator    : ElementEntryWithCosting 
+Version                 : V2 
+Hierarchy Level         : Top 
+Parent Discriminator    : (null) 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+  CAT 3 FAIL : OBJ-203: CreatorType - This model mandatory attribute is HDL hidden. 
+  CAT 3 FAIL : OBJ-203: PersonId - This model mandatory attribute is HDL hidden. 
+  CAT 3 FAIL : OBJ-204: ObjectVersionNumber - Remove the DLoadHidden property from this rejected attribute. 
+  CAT 2 FAIL : OBJ-210: AssignmentId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+  CAT 2 FAIL : OBJ-213: AssignmentId - The DLoadLOVReturnAttributes annotation specifies an attribute HrAssignmentId that is transient on the LOV VO oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.PayAssignmentPVO. 
+  CAT 2 FAIL : OBJ-210: ElementEntryId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+  CAT 2 FAIL : OBJ-213: ElementEntryId - The DLoadLOVDisplayAttributes annotation specifies an attribute EntrySequence that is transient on the LOV VO oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementEntryLOVVO. 
+  CAT 2 FAIL : OBJ-210: ElementTypeId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+  CAT 2 FAIL : OBJ-206: LegislativeDataGroupId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, DLoadLOVListSecurityViewCriteria] property from this attribute as the attribute is HDL hidden. 
+  CAT 2 FAIL : SKL-012: ElementTypeId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKF-004: LegislativeDataGroupId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+  CAT 2 FAIL : SKL-012: LegislativeDataGroupId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKF-004: PersonId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Element Entry with Costing 
+  UI_DESCRIPTION             : An element entry holds the actual payroll element and benefits granted to a worker. The costing of an element entry refers to the 
+                               costing segment information entered for an element entry and is used in payroll processing to create the costing results. You 
+                               can't upload date-effective history using this object, use the Element Entry object instead. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : ElementEntryWithCosting 
+  BUS_OBJ_FILE_DISCRIMINATOR : ElementEntryWithCosting 
+  PROCESSING_ORDER           : 105100 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : ORA_PAY_MAINTAIN 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementEntryWithCostingVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.applicationModule.PayrollElementEntryWithCostingAM 
+  USING_APP_CONFIG           : PayrollElementEntryWithCostingAMLocal 
+  USING_APP_VIEWUSAGE_NAME   : ElementEntryWithCosting 
+  WS_CONNECTION_QNAME        : HcmDataLoaderPayrollService 
+  CALLBACK_CONNECTION_QNAME  : HcmDataLoaderEssCallbackService 
+  GROUP_BY_EXPRESSION        : COALESCE([PersonId],[AssignmentNumber]) 
+  ORDER_BY_EXPRESSION        : COALESCE([PersonId],[AssignmentNumber]),[EffectiveStartDate],nvl(COALESCE([EntrySequence],[CreateEntrySequence]),1) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : Y 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : Create 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ElementEntry 
+  Parent Object              : n/a 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : NONE 
+ 
+    ** CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PAY_ELEMENT_ENTRIES_F          EFFECTIVE_END_DATE 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PAY_ELEMENT_ENTRIES_F          EFFECTIVE_START_DATE 
+  ElementEntryId                      PVAL002                   (null)                 (null)                 Number       18 (null) True      Yes             PAY_ELEMENT_ENTRIES_F          ELEMENT_ENTRY_ID 
+  ElementTypeId                       PVAL003                   PVAL171                PVAL172                Number       18 (null) True      For new records (null)                         (null) 
+  ElementName                         PVAL004                   (null)                 (null)                 String       80        False     For new records (null)                         (null) 
+  AssignmentId                        PVAL008                   PVAL177                PVAL178                Number       18 (null) False     No              (null)                         (null) 
+  AssignmentNumber                    PVAL009                   (null)                 (null)                 String       30        False     For new records (null)                         (null) 
+  Reason                              PVAL011                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Subpriority                         PVAL013                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  EntryType                           PVAL014                   (null)                 (null)                 String       30        True      For new records (null)                         (null) 
+  EntrySequence                       PVAL015                   (null)                 (null)                 Number       18 (null) False     No              PAY_ELEMENT_ENTRIES_F          MULTIPLE_ENTRY_COUNT 
+  CreateEntrySequence                 PVAL016                   (null)                 (null)                 Number       18 (null) False     For new records (null)                         (null) 
+  SourceSystemOwner                   PVAL017                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL018                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL019                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  InputValueName1                     PVAL060                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName10                    PVAL061                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName11                    PVAL062                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName12                    PVAL063                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName13                    PVAL064                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName14                    PVAL065                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName15                    PVAL066                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName16                    PVAL067                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName17                    PVAL068                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName18                    PVAL069                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName19                    PVAL070                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName2                     PVAL071                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName20                    PVAL072                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName21                    PVAL073                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName22                    PVAL074                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName23                    PVAL075                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName24                    PVAL076                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName25                    PVAL077                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName26                    PVAL078                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName27                    PVAL079                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName28                    PVAL080                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName29                    PVAL081                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName3                     PVAL082                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName30                    PVAL083                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName31                    PVAL084                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName32                    PVAL085                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName33                    PVAL086                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName34                    PVAL087                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName35                    PVAL088                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName36                    PVAL089                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName37                    PVAL090                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName38                    PVAL091                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName39                    PVAL092                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName4                     PVAL093                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName40                    PVAL094                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName5                     PVAL095                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName6                     PVAL096                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName7                     PVAL097                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName8                     PVAL098                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  InputValueName9                     PVAL099                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue1                   PVAL100                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue10                  PVAL101                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue11                  PVAL102                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue12                  PVAL103                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue13                  PVAL104                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue14                  PVAL105                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue15                  PVAL106                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue16                  PVAL107                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue17                  PVAL108                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue18                  PVAL109                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue19                  PVAL110                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue2                   PVAL111                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue20                  PVAL112                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue21                  PVAL113                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue22                  PVAL114                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue23                  PVAL115                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue24                  PVAL116                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue25                  PVAL117                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue26                  PVAL118                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue27                  PVAL119                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue28                  PVAL120                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue29                  PVAL121                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue3                   PVAL122                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue30                  PVAL123                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue31                  PVAL124                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue32                  PVAL125                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue33                  PVAL126                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue34                  PVAL127                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue35                  PVAL128                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue36                  PVAL129                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue37                  PVAL130                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue38                  PVAL131                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue39                  PVAL132                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue4                   PVAL133                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue40                  PVAL134                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue5                   PVAL135                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue6                   PVAL136                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue7                   PVAL137                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue8                   PVAL138                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ScreenEntryValue9                   PVAL139                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment1                            PVAL140                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment10                           PVAL141                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment11                           PVAL142                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment12                           PVAL143                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment13                           PVAL144                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment14                           PVAL145                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment15                           PVAL146                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment16                           PVAL147                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment17                           PVAL148                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment18                           PVAL149                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment19                           PVAL150                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment2                            PVAL151                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment20                           PVAL152                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment21                           PVAL153                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment22                           PVAL154                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment23                           PVAL155                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment24                           PVAL156                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment25                           PVAL157                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment26                           PVAL158                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment27                           PVAL159                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment28                           PVAL160                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment29                           PVAL161                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment3                            PVAL162                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment30                           PVAL163                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment4                            PVAL164                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment5                            PVAL165                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment6                            PVAL166                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment7                            PVAL167                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment8                            PVAL168                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Segment9                            PVAL169                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    AssignmentNumber                    False     For new records DLoadAttrsRequiredOnCreate property. 
+    CreateEntrySequence                 False     For new records DLoadAttrsRequiredOnCreate property. 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+    ElementName                         False     For new records DLoadAttrsRequiredOnCreate property. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  CreatorType                         PVAL170                   (null)                 (null)                 String       30        True      No              PAY_ELEMENT_ENTRIES_F          CREATOR_TYPE 
+    ** CAT 3 FAIL : OBJ-203: CreatorType - This model mandatory attribute is HDL hidden. 
+ 
+  InputValueId1                       PVAL020                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId10                      PVAL021                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId11                      PVAL022                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId12                      PVAL023                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId13                      PVAL024                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId14                      PVAL025                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId15                      PVAL026                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId16                      PVAL027                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId17                      PVAL028                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId18                      PVAL029                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId19                      PVAL030                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId2                       PVAL031                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId20                      PVAL032                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId21                      PVAL033                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId22                      PVAL034                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId23                      PVAL035                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId24                      PVAL036                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId25                      PVAL037                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId26                      PVAL038                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId27                      PVAL039                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId28                      PVAL040                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId29                      PVAL041                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId3                       PVAL042                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId30                      PVAL043                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId31                      PVAL044                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId32                      PVAL045                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId33                      PVAL046                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId34                      PVAL047                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId35                      PVAL048                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId36                      PVAL049                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId37                      PVAL050                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId38                      PVAL051                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId39                      PVAL052                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId4                       PVAL053                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId40                      PVAL054                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId5                       PVAL055                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId6                       PVAL056                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId7                       PVAL057                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId8                       PVAL058                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  InputValueId9                       PVAL059                   (null)                 (null)                 Number   (null) (null) False     No              (null)                         (null) 
+  LegislativeDataGroupId              PVAL005                   PVAL173                PVAL174                Number       18 (null) False     No              (null)                         (null) 
+  PayAssignmentId                     PVAL001                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  PersonId                            PVAL006                   PVAL175                PVAL176                Number       18 (null) True      No              PAY_ELEMENT_ENTRIES_F          PERSON_ID 
+    ** CAT 3 FAIL : OBJ-203: PersonId - This model mandatory attribute is HDL hidden. 
+ 
+  PersonNumber                        PVAL007                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  RelationshipId                      PVAL012                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  UsageLevel                          PVAL010                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  ObjectVersionNumber                 java.lang.Integer      PAY_ELEMENT_ENTRIES_F          OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+    ** CAT 3 FAIL : OBJ-204: ObjectVersionNumber - Remove the DLoadHidden property from this rejected attribute. 
+ 
+  EntryTypeVA                         oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  ElementTypeVA                       oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  Attribute Name                         DLoadUnsecureForeignSurrogate DLoadSpreadsheetHideAttribute DLoadSpreadsheetDisableLOV 
+  -------------------------------------- ----------------------------- ----------------------------- -------------------------- 
+  AssignmentId                           -                             X                             - 
+  ElementEntryId                         -                             X                             - 
+  ElementTypeId                          -                             X                             - 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.PayAssignmentPVO 
+                                           DLoadLOVDisplayAttributes        : [AssignmentNumber] 
+                                           DLoadLOVReturnAttributes         : HrAssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_SEARCH_PERSON_LIVE_DATA__PER_ALL_PEOPLE_F__QRSLT 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 2 FAIL : OBJ-210: AssignmentId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, 
+                               DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+      ** CAT 2 FAIL : OBJ-213: AssignmentId - The DLoadLOVReturnAttributes annotation specifies an attribute HrAssignmentId that is transient on the LOV VO 
+                               oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.PayAssignmentPVO. 
+ 
+    AssignmentNumber                       DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.PayAssignmentPVO 
+                                           DLoadLOVDisplayAttributes        : [AssignmentNumber] 
+                                           DLoadLOVReturnAttributes         : AssignmentNumber 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_SEARCH_PERSON_LIVE_DATA__PER_ALL_PEOPLE_F__QRSLT 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ElementEntryId                         DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementEntryLOVVO 
+                                           DLoadLOVDisplayAttributes        : [ElementName,Name,AssignmentNumber,EntryType,EntrySequence] 
+                                           DLoadLOVReturnAttributes         : ElementEntryId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : ElementEntryLOVVOCriteria 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 2 FAIL : OBJ-210: ElementEntryId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, 
+                               DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+      ** CAT 2 FAIL : OBJ-213: ElementEntryId - The DLoadLOVDisplayAttributes annotation specifies an attribute EntrySequence that is transient on the LOV VO 
+                               oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementEntryLOVVO. 
+ 
+    ElementName                            DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementTypeVVO 
+                                           DLoadLOVDisplayAttributes        : [ElementName,LegislativeDataGroupName] 
+                                           DLoadLOVReturnAttributes         : ElementName 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : ElemenTypeLOVVOCriteria 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ElementTypeId                          DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementTypeVVO 
+                                           DLoadLOVDisplayAttributes        : [ElementName,LegislativeDataGroupName] 
+                                           DLoadLOVReturnAttributes         : ElementTypeId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PAY_VIEW_PAYROLL_ELEMENT_ENTRY_DATA__PAY_ELEMENT_TYPES_F_V__QRSLT 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 2 FAIL : OBJ-210: ElementTypeId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, 
+                               DLoadLOVListSecurityViewCriteria] property set from this attribute as the attribute is HSDL hidden. 
+ 
+    LegislativeDataGroupId                 DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.legislativeDataGroups.publicView.LegislativeDataGroupPVO 
+                                           DLoadLOVDisplayAttributes        : [Name] 
+                                           DLoadLOVReturnAttributes         : LegislativeDataGroupId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGISLATIVE_DATA_GROUP_DATA__PER_LEGISLATIVE_DATA_GROUPS__LegislativeDataGroupPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 2 FAIL : OBJ-206: LegislativeDataGroupId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, 
+                               DLoadLOVListSecurityViewCriteria] property from this attribute as the attribute is HDL hidden. 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.payrolls.elements.entries.protectedModel.entity.ElementEntryLoaderDEO 
+     Table/View             : PAY_ELEMENT_ENTRIES_F 
+     Updateable             : True 
+     Integration Object Name: ElementEntry 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PAY_ELEMENT_ENTRIES_F          HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  EffectiveEndDate 
+  EffectiveStartDate 
+  ElementEntryId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ElementEntryId 
+  Integration Object Name: ElementEntry 
+  User Keys 
+    [0] AssignmentNumber, ElementName, EntryType, CreateEntrySequence 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKVAL004 
+    [1] AssignmentNumber, ElementName, EntryType, EntrySequence 
+    UK Stage [1] UKVAL001, UKVAL002, UKVAL003, UKVAL004 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PAY_REL_GROUPS_DN              ASSIGNMENT_NUMBER              DLoadAttributeTableAndColumn 
+    ElementName                    PAY_ELEMENT_TYPES_F            BASE_ELEMENT_NAME              DLoadAttributeTableAndColumn 
+    EntryType                      PAY_ELEMENT_ENTRIES_F          ENTRY_TYPE                     DLoadSurrogateColumnMap 
+    CreateEntrySequence            PAY_ELEMENT_ENTRIES_F          MULTIPLE_ENTRY_COUNT           DLoadSurrogateColumnMap 
+    EntrySequence                  PAY_ELEMENT_ENTRIES_F          MULTIPLE_ENTRY_COUNT           Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Not applicable, this is a top level component. 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : AssignmentId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Assignment 
+    Identified by        : DLoadForeignIntegration property [Assignment;AssignmentId;PER_ALL_ASSIGNMENTS_M;ASSIGNMENT_ID] 
+  Referenced Table/View  : PER_ALL_ASSIGNMENTS_M 
+  Referenced Column      : ASSIGNMENT_ID 
+  User Keys 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+  Attribute Name         : ElementTypeId 
+  Attribute Availability : Accepted 
+  Integration Object Name: ElementType 
+    Identified by        : DLoadForeignIntegration property [ElementType;ElementTypeId;PAY_ELEMENT_TYPES_F;ELEMENT_TYPE_ID] 
+  Referenced Table/View  : PAY_ELEMENT_TYPES_F 
+  Referenced Column      : ELEMENT_TYPE_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: ElementTypeId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate 
+                             attribute on this component. 
+ 
+    [0] ElementName, AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    ElementName 
+    AssignmentNumber 
+ 
+  Attribute Name         : LegislativeDataGroupId 
+  Attribute Availability : HDL Hidden 
+  Integration Object Name: LegislativeDataGroups 
+    Identified by        : DLoadForeignIntegration property [LegislativeDataGroups;LegislativeDataGroupId;PER_LEGISLATIVE_DATA_GROUPS_VL;LEGISLATIVE_DATA_GROUP_ID] 
+  Referenced Table/View  : PER_LEGISLATIVE_DATA_GROUPS_VL 
+  Referenced Column      : LEGISLATIVE_DATA_GROUP_ID 
+    ** CAT 2 FAIL : SKF-004: LegislativeDataGroupId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+ 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: LegislativeDataGroupId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local 
+                             surrogate attribute on this component. 
+ 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : HDL Hidden 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId;PER_PERSONS;PERSON_ID] 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+    ** CAT 2 FAIL : SKF-004: PersonId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+ 
+  User Keys 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  Attribute Name         : PayAssignmentId 
+  Attribute Availability : HDL Hidden 
+    Identified by        : User Key Only 
+  Referenced Table/View  : (null) 
+  Referenced Column      : (null) 
+ 
+  Attribute Name         : UsageLevel 
+  Attribute Availability : HDL Hidden 
+    Identified by        : User Key Only 
+  Referenced Table/View  : (null) 
+  Referenced Column      : (null) 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  EntryType                      PAY_ENTRY_TYPE 
+ 
+ 

@@ -1,0 +1,137 @@
+﻿Name,Label,Length,Key Type,Integration Keys Supported,Integration Object Name,User Key,Required,Lookup,Description
+ElementEntryId,Element Entry ID,18,Surrogate ID,Yes,ElementEntry,2 user keys,Yes,,An application generated value to uniquely identify the element entry. This is only available when updating an existing record.
+AssignmentNumber,Assignment Number,30,User Key,,,,For new records,,The number that identifies the person's assignment.
+CreateEntrySequence,Create Entry Sequence,18,User Key,,,,For new records,,A number to uniquely identify the element entry for the element type and assignment within the file. It's used to create the element entry while considering the entry sequence of any existing element entries for the same element type and assignment. Supply only while creating the new element entry.
+ElementName,Element Name,80,User Key,,,,For new records,,"The name of the element this entry is for, such as performance bonus."
+EntryType,Entry Type,30,User Key,,,,For new records,PAY_ENTRY_TYPE,"The type of record, such as element entry, or override."
+EntrySequence,Existing Entry Sequence,18,User Key,,,,No,,A number to uniquely identify an existing element entry for the same element and assignment. Supply only while updating or deleting an existing element entry.
+EffectiveEndDate,Effective End Date,,,,,,No,,"The end date of the date-effective changes. If left blank, the effective end date is the end of time by default."
+EffectiveStartDate,Effective Start Date,,,,,,Yes,,The start date of the record or of date-effective changes to the record.
+AssignmentId,Assignment ID,18,Foreign Object Reference,Yes,Assignment,AssignmentNumber,No,,A unique reference to the assignment associated with the employee.
+ElementTypeId,Element Type ID,18,Foreign Object Reference,Yes,ElementType,"ElementName, AssignmentNumber",For new records,,A unique reference to the element type this entry is for.
+InputValueName1,Input Value Name 1,,,,,,No,,The name of the first input value that you are providing an entry value for.
+InputValueName10,Input Value Name 10,,,,,,No,,The name of the tenth input value that you are providing an entry value for.
+InputValueName11,Input Value Name 11,,,,,,No,,The name of the eleventh input value that you are providing an entry value for.
+InputValueName12,Input Value Name 12,,,,,,No,,The name of the twelfth input value that you are providing an entry value for.
+InputValueName13,Input Value Name 13,,,,,,No,,The name of the thirteenth input value that you are providing an entry value for.
+InputValueName14,Input Value Name 14,,,,,,No,,The name of the fourteenth input value that you are providing an entry value for.
+InputValueName15,Input Value Name 15,,,,,,No,,The name of the fifteenth input value that you are providing an entry value for.
+InputValueName16,Input Value Name 16,,,,,,No,,The name of the sixteenth input value that you are providing an entry value for.
+InputValueName17,Input Value Name 17,,,,,,No,,The name of the seventeenth input value that you are providing an entry value for.
+InputValueName18,Input Value Name 18,,,,,,No,,The name of the eighteenth input value that you are providing an entry value for.
+InputValueName19,Input Value Name 19,,,,,,No,,The name of the nineteenth input value that you are providing an entry value for.
+InputValueName2,Input Value Name 2,,,,,,No,,The name of the second input value that you are providing an entry value for.
+InputValueName20,Input Value Name 20,,,,,,No,,The name of the twentieth input value that you are providing an entry value for.
+InputValueName21,Input Value Name 21,,,,,,No,,The name of the twenty-first input value that you are providing an entry value for.
+InputValueName22,Input Value Name 22,,,,,,No,,The name of the twenty-second input value that you are providing an entry value for.
+InputValueName23,Input Value Name 23,,,,,,No,,The name of the twenty-third input value that you are providing an entry value for.
+InputValueName24,Input Value Name 24,,,,,,No,,The name of the twenty-fourth input value that you are providing an entry value for.
+InputValueName25,Input Value Name 25,,,,,,No,,The name of the twenty-fifth input value that you are providing an entry value for.
+InputValueName26,Input Value Name 26,,,,,,No,,The name of the twenty-sixth input value that you are providing an entry value for.
+InputValueName27,Input Value Name 27,,,,,,No,,The name of the twenty-seventh input value that you are providing an entry value for.
+InputValueName28,Input Value Name 28,,,,,,No,,The name of the twenty-eighth input value that you are providing an entry value for.
+InputValueName29,Input Value Name 29,,,,,,No,,The name of the twenty-ninth input value that you are providing an entry value for.
+InputValueName3,Input Value Name 3,,,,,,No,,The name of the third input value that you are providing an entry value for.
+InputValueName30,Input Value Name 30,,,,,,No,,The name of the Thirtieth input value that you are providing an entry value for.
+InputValueName31,Input Value Name 31,,,,,,No,,The name of the thirty-first input value that you are providing an entry value for.
+InputValueName32,Input Value Name 32,,,,,,No,,The name of the thirty-second input value that you are providing an entry value for.
+InputValueName33,Input Value Name 33,,,,,,No,,The name of the thirty-third input value that you are providing an entry value for.
+InputValueName34,Input Value Name 34,,,,,,No,,The name of the thirty-fourth input value that you are providing an entry value for.
+InputValueName35,Input Value Name 35,,,,,,No,,The name of the thirty-fifth input value that you are providing an entry value for.
+InputValueName36,Input Value Name 36,,,,,,No,,The name of the thirty-sixth input value that you are providing an entry value for.
+InputValueName37,Input Value Name 37,,,,,,No,,The name of the thirty-seventh input value that you are providing an entry value for.
+InputValueName38,Input Value Name 38,,,,,,No,,The name of the thirty-eighth input value that you are providing an entry value for.
+InputValueName39,Input Value Name 39,,,,,,No,,The name of the thirty-ninth input value that you are providing an entry value for.
+InputValueName4,Input Value Name 4,,,,,,No,,The name of the fourth input value that you are providing an entry value for.
+InputValueName40,Input Value Name 40,,,,,,No,,The name of the Fortieth input value that you are providing an entry value for.
+InputValueName5,Input Value Name 5,,,,,,No,,The name of the fifth input value that you are providing an entry value for.
+InputValueName6,Input Value Name 6,,,,,,No,,The name of the sixth input value that you are providing an entry value for.
+InputValueName7,Input Value Name 7,,,,,,No,,The name of the seventh input value that you are providing an entry value for.
+InputValueName8,Input Value Name 8,,,,,,No,,The name of the eighth input value that you are providing an entry value for.
+InputValueName9,Input Value Name 9,,,,,,No,,The name of the ninth input value that you are providing an entry value for.
+Reason,Reason,,,,,,No,,The reason for creating or updating the element entry.
+ScreenEntryValue1,Screen Entry Value 1,,,,,,No,,The entry value for the input value named by InputValueName1.
+ScreenEntryValue10,Screen Entry Value 10,,,,,,No,,The entry value for the input value named by InputValueName10.
+ScreenEntryValue11,Screen Entry Value 11,,,,,,No,,The entry value for the input value named by InputValueName11.
+ScreenEntryValue12,Screen Entry Value 12,,,,,,No,,The entry value for the input value named by InputValueName12.
+ScreenEntryValue13,Screen Entry Value 13,,,,,,No,,The entry value for the input value named by InputValueName13.
+ScreenEntryValue14,Screen Entry Value 14,,,,,,No,,The entry value for the input value named by InputValueName14.
+ScreenEntryValue15,Screen Entry Value 15,,,,,,No,,The entry value for the input value named by InputValueName15.
+ScreenEntryValue16,Screen Entry Value 16,,,,,,No,,The entry value for the input value named by InputValueName16.
+ScreenEntryValue17,Screen Entry Value 17,,,,,,No,,The entry value for the input value named by InputValueName17.
+ScreenEntryValue18,Screen Entry Value 18,,,,,,No,,The entry value for the input value named by InputValueName18.
+ScreenEntryValue19,Screen Entry Value 19,,,,,,No,,The entry value for the input value named by InputValueName19.
+ScreenEntryValue2,Screen Entry Value 2,,,,,,No,,The entry value for the input value named by InputValueName2.
+ScreenEntryValue20,Screen Entry Value 20,,,,,,No,,The entry value for the input value named by InputValueName20.
+ScreenEntryValue21,Screen Entry Value 21,,,,,,No,,The entry value for the input value named by InputValueName21.
+ScreenEntryValue22,Screen Entry Value 22,,,,,,No,,The entry value for the input value named by InputValueName22.
+ScreenEntryValue23,Screen Entry Value 23,,,,,,No,,The entry value for the input value named by InputValueName23.
+ScreenEntryValue24,Screen Entry Value 24,,,,,,No,,The entry value for the input value named by InputValueName24.
+ScreenEntryValue25,Screen Entry Value 25,,,,,,No,,The entry value for the input value named by InputValueName25.
+ScreenEntryValue26,Screen Entry Value 26,,,,,,No,,The entry value for the input value named by InputValueName26.
+ScreenEntryValue27,Screen Entry Value 27,,,,,,No,,The entry value for the input value named by InputValueName27.
+ScreenEntryValue28,Screen Entry Value 28,,,,,,No,,The entry value for the input value named by InputValueName28.
+ScreenEntryValue29,Screen Entry Value 29,,,,,,No,,The entry value for the input value named by InputValueName29.
+ScreenEntryValue3,Screen Entry Value 3,,,,,,No,,The entry value for the input value named by InputValueName3.
+ScreenEntryValue30,Screen Entry Value 30,,,,,,No,,The entry value for the input value named by InputValueName30.
+ScreenEntryValue31,Screen Entry Value 31,,,,,,No,,The entry value for the input value named by InputValueName31.
+ScreenEntryValue32,Screen Entry Value 32,,,,,,No,,The entry value for the input value named by InputValueName32.
+ScreenEntryValue33,Screen Entry Value 33,,,,,,No,,The entry value for the input value named by InputValueName33.
+ScreenEntryValue34,Screen Entry Value 34,,,,,,No,,The entry value for the input value named by InputValueName34.
+ScreenEntryValue35,Screen Entry Value 35,,,,,,No,,The entry value for the input value named by InputValueName35.
+ScreenEntryValue36,Screen Entry Value 36,,,,,,No,,The entry value for the input value named by InputValueName36.
+ScreenEntryValue37,Screen Entry Value 37,,,,,,No,,The entry value for the input value named by InputValueName37.
+ScreenEntryValue38,Screen Entry Value 38,,,,,,No,,The entry value for the input value named by InputValueName38.
+ScreenEntryValue39,Screen Entry Value 39,,,,,,No,,The entry value for the input value named by InputValueName39.
+ScreenEntryValue4,Screen Entry Value 4,,,,,,No,,The entry value for the input value named by InputValueName4.
+ScreenEntryValue40,Screen Entry Value 40,,,,,,No,,The entry value for the input value named by InputValueName40.
+ScreenEntryValue5,Screen Entry Value 5,,,,,,No,,The entry value for the input value named by InputValueName5.
+ScreenEntryValue6,Screen Entry Value 6,,,,,,No,,The entry value for the input value named by InputValueName6.
+ScreenEntryValue7,Screen Entry Value 7,,,,,,No,,The entry value for the input value named by InputValueName7.
+ScreenEntryValue8,Screen Entry Value 8,,,,,,No,,The entry value for the input value named by InputValueName8.
+ScreenEntryValue9,Screen Entry Value 9,,,,,,No,,The entry value for the input value named by InputValueName9.
+Segment1,Segment 1,,,,,,No,,The value of the first segment for cost and offset accounts.
+Segment10,Segment 10,,,,,,No,,The value of the tenth segment for cost and offset accounts.
+Segment11,Segment 11,,,,,,No,,The value of the eleventh segment for cost and offset accounts.
+Segment12,Segment 12,,,,,,No,,The value of the twelfth segment for cost and offset accounts.
+Segment13,Segment 13,,,,,,No,,The value of the thirteenth segment for cost and offset accounts.
+Segment14,Segment 14,,,,,,No,,The value of the fourteenth segment for cost and offset accounts.
+Segment15,Segment 15,,,,,,No,,The value of the fifteenth segment for cost and offset accounts.
+Segment16,Segment 16,,,,,,No,,The value of the sixteenth segment for cost and offset accounts.
+Segment17,Segment 17,,,,,,No,,The value of the seventeenth segment for cost and offset accounts.
+Segment18,Segment 18,,,,,,No,,The value of the eighteenth segment for cost and offset accounts.
+Segment19,Segment 19,,,,,,No,,The value of the nineteenth segment for cost and offset accounts.
+Segment2,Segment 2,,,,,,No,,The value of the second segment for cost and offset accounts.
+Segment20,Segment 20,,,,,,No,,The value of the twentieth segment for cost and offset accounts.
+Segment21,Segment 21,,,,,,No,,The value of the twenty-first segment for cost and offset accounts.
+Segment22,Segment 22,,,,,,No,,The value of the twenty-second segment for cost and offset accounts.
+Segment23,Segment 23,,,,,,No,,The value of the twenty-third segment for cost and offset accounts.
+Segment24,Segment 24,,,,,,No,,The value of the twenty-fourth segment for cost and offset accounts.
+Segment25,Segment 25,,,,,,No,,The value of the twenty-fifth segment for cost and offset accounts.
+Segment26,Segment 26,,,,,,No,,The value of the twenty-sixth segment for cost and offset accounts.
+Segment27,Segment 27,,,,,,No,,The value of the twenty-seventh segment for cost and offset accounts.
+Segment28,Segment 28,,,,,,No,,The value of the twenty-eighth segment for cost and offset accounts.
+Segment29,Segment 29,,,,,,No,,The value of the twenty-ninth segment for cost and offset accounts.
+Segment3,Segment 3,,,,,,No,,The value of the third segment for cost and offset accounts.
+Segment30,Segment 30,,,,,,No,,The value of the Thirtieth segment for cost and offset accounts.
+Segment4,Segment 4,,,,,,No,,The value of the fourth segment for cost and offset accounts.
+Segment5,Segment 5,,,,,,No,,The value of the fifth segment for cost and offset accounts.
+Segment6,Segment 6,,,,,,No,,The value of the sixth segment for cost and offset accounts.
+Segment7,Segment 7,,,,,,No,,The value of the seventh segment for cost and offset accounts.
+Segment8,Segment 8,,,,,,No,,The value of the eighth segment for cost and offset accounts.
+Segment9,Segment 9,,,,,,No,,The value of the ninth segment for cost and offset accounts.
+Subpriority,Subpriority,,,,,,No,,Determines the sequence for processing element entries that have the same priority.
+SourceSystemId,Source System ID,100,Source Key,,,,No,,A value to uniquely identify this record. This must be unique for the source system owner and business object component.
+SourceSystemOwner,Source System Owner,30,Source Key,,,,No,,The name of the source system used to generate the source system ID.
+GUID,Globally Unique ID,32,Globally Unique ID,,,,No,,"The globally unique ID. Only available to reference existing records, it cannot be supplied for new records."
+SourceRefTableName,Reference Context,200,,,,,No,,"The context for the user-defined references provided for this component. Don't supply values for this attribute, instead specify the context against this attribute in the METADATA line using the format: SourceRefTableName= context. For example: SourceRefTableName=Store Information."
+SourceRef001,Reference 1,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef002,Reference 2,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef003,Reference 3,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef004,Reference 4,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef005,Reference 5,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef006,Reference 6,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef007,Reference 7,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef008,Reference 8,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef009,Reference 9,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
+SourceRef010,Reference 10,200,,,,,No,,"A user-defined reference value used for reporting and reconciling your data in the staging tables. This information is not saved in the application. You name your reference on the METADATA line using the format Attribute name = Reference name. For example, SourceRef001=Assignment Number."
