@@ -1,0 +1,256 @@
+================================================================================================================================= 
+Hierarchy Discriminator : ObjectGroupAmend 
+Object Discriminator    : ObjectGroupAmend 
+Version                 : V2 
+Hierarchy Level         : Top 
+Parent Discriminator    : (null) 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : UKL-205: ObjectCode - ObjectGroupAmendId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: ObjectCode - ObjectGroupAmendId - No resolver VO found for the user key attribute. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Object Group Inclusions and Exclusions 
+  UI_DESCRIPTION             : Specifies the records that are included in and excluded from an object group. For example, the payroll relationships and payroll 
+                               assignments are included in a payroll relationship object group. Inclusions and exclusions must be defined for static object 
+                               groups, but they are optional for dynamic object groups. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : ObjectGroupAmend 
+  BUS_OBJ_FILE_DISCRIMINATOR : ObjectGroupAmend 
+  PROCESSING_ORDER           : 150020 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : ORA_PAY_DEFINE 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.objectGroups.objectGroupServiceV2.view.ObjectGroupAmendmentVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : oracle.apps.hcm.objectGroups.objectGroupServiceV2.applicationModule.ObjectGroupServiceV2AM 
+  USING_APP_CONFIG           : ObjectGroupServiceV2AMLocal 
+  USING_APP_VIEWUSAGE_NAME   : ObjectGroupAmendment 
+  WS_CONNECTION_QNAME        : HcmDataLoaderPayrollService 
+  CALLBACK_CONNECTION_QNAME  : HcmDataLoaderEssCallbackService 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : No ** The data security classification for this object is unknown so spreadsheets based on this object cannot be shared with 
+                               business users for bulk loading. 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ObjectGroupAmend 
+  Parent Object              : n/a 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  LegislativeDataGroupName            PVAL001                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  LegislativeDataGroupId              PVAL002                   PVAL015                PVAL016                Number       18 (null) False     No              (null)                         (null) 
+  ObjectGroupCode                     PVAL003                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  ObjectGroupId                       PVAL004                   PVAL013                PVAL014                Number       18 (null) True      For new records PAY_OBJECT_GROUP_AMENDS        OBJECT_GROUP_ID 
+  ObjectGroupAmendId                  PVAL005                   (null)                 (null)                 Number       18 (null) True      Yes             PAY_OBJECT_GROUP_AMENDS        OBJECT_GROUP_AMEND_ID 
+  ObjectGroupLevelName                PVAL006                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  ObjectCode                          PVAL007                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  IncludeOrExclude                    PVAL008                   (null)                 (null)                 String       30        True      For new records PAY_OBJECT_GROUP_AMENDS        INCLUDE_OR_EXCLUDE 
+  GUID                                PVAL009                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL010                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL011                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  LookupCode                          PVAL012                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectGroupLevelId                  java.lang.Long         PAY_OBJECT_GROUP_AMENDS        OBJECT_GROUP_LEVEL_ID          ___SDO_HIDDEN 
+  ObjectId                            java.lang.Long         PAY_OBJECT_GROUP_AMENDS        OBJECT_ID                      ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PAY_OBJECT_GROUP_AMENDS        OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  IncludeOrExcludeVA                  oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  Attribute Name                         DLoadUnsecureForeignSurrogate DLoadSpreadsheetHideAttribute DLoadSpreadsheetDisableLOV 
+  -------------------------------------- ----------------------------- ----------------------------- -------------------------- 
+  LegislativeDataGroupId                 -                             X                             - 
+  ObjectGroupAmendId                     -                             X                             - 
+  ObjectGroupId                          -                             X                             - 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    LegislativeDataGroupName               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.legislativeDataGroups.publicView.LegislativeDataGroupPVO 
+                                           DLoadLOVDisplayAttributes        : [Name] 
+                                           DLoadLOVReturnAttributes         : Name 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGISLATIVE_DATA_GROUP_DATA__PER_LEGISLATIVE_DATA_GROUPS__LegislativeDataGroupPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.objectGroups.protectedModel.entity.ObjectGroupAmendmentEO 
+     Table/View             : PAY_OBJECT_GROUP_AMENDS 
+     Updateable             : True 
+     Integration Object Name: ObjectGroupAmend 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PAY_OBJECT_GROUP_AMENDS        HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ObjectGroupAmendId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ObjectGroupAmendId 
+  Integration Object Name: ObjectGroupAmend 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode, ObjectGroupLevelName, ObjectCode 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKVAL004 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           DLoadAttributeTableAndColumn 
+    ObjectGroupCode                PAY_OBJECT_GROUPS_VL           BASE_OBJECT_GROUP_NAME         KeyHelper Resolver VO 
+    ObjectGroupLevelName           HCM_LOOKUPS                    MEANING                        KeyHelper Resolver VO 
+    ObjectCode                     (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: ObjectCode - ObjectGroupAmendId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: ObjectCode - ObjectGroupAmendId - No resolver VO found for the user key attribute. 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Not applicable, this is a top level component. 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : LegislativeDataGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: LegislativeDataGroups 
+    Identified by        : DLoadForeignIntegration property [LegislativeDataGroups;LegislativeDataGroupId;PER_LEGISLATIVE_DATA_GROUPS_VL;LEGISLATIVE_DATA_GROUP_ID] 
+  Referenced Table/View  : PER_LEGISLATIVE_DATA_GROUPS_VL 
+  Referenced Column      : LEGISLATIVE_DATA_GROUP_ID 
+  User Keys 
+    [0] LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+ 
+  Attribute Name         : ObjectGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: ObjectGroup 
+    Identified by        : EO association usage + Referenced EO has IntegrationObjectName 
+  Referenced Table/View  : PAY_OBJECT_GROUPS_VL 
+  Referenced Column      : OBJECT_GROUP_ID 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+    ObjectGroupCode 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  IncludeOrExclude               PAY_INCLUDE_EXCLUDE 
+ 
+ 

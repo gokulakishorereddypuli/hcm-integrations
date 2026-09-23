@@ -1,0 +1,262 @@
+================================================================================================================================= 
+Hierarchy Discriminator : ObjectGroup 
+Object Discriminator    : ObjectGroupRule 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : ObjectGroup 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : SKF-018: FormulaId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Formula: [FastFormula,V1,FastFormula]. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Object Group Level Rules 
+  UI_DESCRIPTION             : Specifies the formulas associated with dynamic payroll relationship object groups. Formulas can be defined at both payroll 
+                               relationship and payroll assignment levels. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : ObjectGroup 
+  BUS_OBJ_FILE_DISCRIMINATOR : ObjectGroupRule 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.objectGroups.objectGroupServiceV2.view.ObjectGroupRuleVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : ObjectGroupRule 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ObjectGroupRule 
+  Parent Object              : ObjectGroup 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ObjectGroupId                       PVAL001                   PVAL012                PVAL013                Number       18 (null) True      Yes             PAY_OBJECT_GROUP_RULES         OBJECT_GROUP_ID 
+  ObjectGroupCode                     PVAL002                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  LegislativeDataGroupName            PVAL003                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  ObjectGroupRuleId                   PVAL004                   (null)                 (null)                 Number       18 (null) True      Yes             PAY_OBJECT_GROUP_RULES         OBJECT_GROUP_RULE_ID 
+  ObjectGroupLevelName                PVAL005                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  FormulaId                           PVAL006                   PVAL014                PVAL015                Number       18 (null) True      For new records PAY_OBJECT_GROUP_RULES         FORMULA_ID 
+  FormulaCode                         PVAL007                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  LegislativeDataGroupId              PVAL008                   PVAL016                PVAL017                Number       18 (null) False     No              (null)                         (null) 
+  SourceSystemId                      PVAL009                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL010                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  GUID                                PVAL011                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectGroupLevelId                  java.lang.Long         PAY_OBJECT_GROUP_RULES         OBJECT_GROUP_LEVEL_ID          ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PAY_OBJECT_GROUP_RULES         OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  SummaryFlag                         java.lang.String       PAY_OBJECT_GROUP_RULES         SUMMARY_FLAG                   ___SDO_HIDDEN 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  Attribute Name                         DLoadUnsecureForeignSurrogate DLoadSpreadsheetHideAttribute DLoadSpreadsheetDisableLOV 
+  -------------------------------------- ----------------------------- ----------------------------- -------------------------- 
+  FormulaId                              -                             X                             - 
+  LegislativeDataGroupId                 -                             X                             - 
+  ObjectGroupId                          -                             X                             - 
+  ObjectGroupRuleId                      -                             X                             - 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    LegislativeDataGroupName               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.legislativeDataGroups.publicView.LegislativeDataGroupPVO 
+                                           DLoadLOVDisplayAttributes        : [Name] 
+                                           DLoadLOVReturnAttributes         : Name 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGISLATIVE_DATA_GROUP_DATA__PER_LEGISLATIVE_DATA_GROUPS__LegislativeDataGroupPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.objectGroups.protectedModel.entity.ObjectGroupRuleEO 
+     Table/View             : PAY_OBJECT_GROUP_RULES 
+     Updateable             : True 
+     Integration Object Name: ObjectGroupRule 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PAY_OBJECT_GROUP_RULES         HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ObjectGroupRuleId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ObjectGroupRuleId 
+  Integration Object Name: ObjectGroupRule 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode, ObjectGroupLevelName, FormulaCode 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKVAL004 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           Parent VO 
+    ObjectGroupCode                PAY_OBJECT_GROUPS_VL           BASE_OBJECT_GROUP_NAME         Parent VO 
+    ObjectGroupLevelName           HCM_LOOKUPS                    MEANING                        KeyHelper Resolver VO 
+    FormulaCode                    FF_FORMULAS_VL                 BASE_FORMULA_NAME              KeyHelper Resolver VO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : ObjectGroupId 
+  Integration Object Name: ObjectGroup 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode 
+    UK Stage [0] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           Parent VO 
+    ObjectGroupCode                PAY_OBJECT_GROUPS_VL           BASE_OBJECT_GROUP_NAME         Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : FormulaId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Formula 
+    Identified by        : DLoadForeignIntegration property [Formula;FormulaId;FF_FORMULAS_B_F;FORMULA_ID] 
+                           EO association usage 
+  Referenced Table/View  : FF_FORMULAS_B_F 
+  Referenced Column      : FORMULA_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKF-018: FormulaId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the 
+                             Integration Object Name Formula: [FastFormula,V1,FastFormula]. 
+ 
+    [0] LegislativeDataGroupName, FormulaCode 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+    FormulaCode 
+ 
+  Attribute Name         : LegislativeDataGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: LegislativeDataGroups 
+    Identified by        : DLoadForeignIntegration property [LegislativeDataGroups;LegislativeDataGroupId;PER_LEGISLATIVE_DATA_GROUPS_VL;LEGISLATIVE_DATA_GROUP_ID] 
+  Referenced Table/View  : PER_LEGISLATIVE_DATA_GROUPS_VL 
+  Referenced Column      : LEGISLATIVE_DATA_GROUP_ID 
+  User Keys 
+    [0] LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 

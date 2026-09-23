@@ -1,0 +1,368 @@
+================================================================================================================================= 
+Hierarchy Discriminator : ElementEntry 
+Object Discriminator    : ElementEntryValue 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : ElementEntry 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : SKL-012: ElementEntryId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKL-012: ElementTypeId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKL-012: InputValueId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKL-012: LegislativeDataGroupId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate attribute on this component. 
+  CAT 2 FAIL : SKF-004: PersonId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Element Entry Value 
+  UI_DESCRIPTION             : Element entry values are the individual values that are contained in the input values for an element entry. They can be defaulted 
+                               or entered by a user. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : ElementEntry 
+  BUS_OBJ_FILE_DISCRIMINATOR : ElementEntryValue 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.payrolls.element.entries.payrollElementEntryServiceV2.view.ElementEntryValueVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : ElementEntryValueVO 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : COALESCE([PersonId],[AssignmentNumber]) 
+  ORDER_BY_EXPRESSION        : COALESCE([PersonId],[AssignmentNumber]),[EffectiveStartDate] 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ElementEntryValue 
+  Parent Object              : ElementEntry 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : Yes 
+  Adjust Logical End Date    : Yes 
+  User Key DE Override       : No 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PAY_ELEMENT_ENTRY_VALUES_F     EFFECTIVE_END_DATE 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PAY_ELEMENT_ENTRY_VALUES_F     EFFECTIVE_START_DATE 
+  ElementEntryValueId                 PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PAY_ELEMENT_ENTRY_VALUES_F     ELEMENT_ENTRY_VALUE_ID 
+  InputValueId                        PVAL002                   PVAL025                PVAL026                Number       18 (null) True      For new records PAY_ELEMENT_ENTRY_VALUES_F     INPUT_VALUE_ID 
+  InputValueName                      PVAL003                   (null)                 (null)                 String       80        False     No              PAY_ELEMENT_ENTRY_VALUES_F     (null) 
+  ScreenEntryValue                    PVAL_SECURE001            (null)                 (null)                 String       60        False     No              PAY_ELEMENT_ENTRY_VALUES_F     SCREEN_ENTRY_VALUE 
+  ElementEntryId                      PVAL004                   PVAL023                PVAL024                Number       18 (null) True      Yes             PAY_ELEMENT_ENTRY_VALUES_F     ELEMENT_ENTRY_ID 
+  AssignmentNumber                    PVAL006                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  ElementTypeId                       PVAL007                   PVAL029                PVAL030                String   (null)        False     No              (null)                         (null) 
+  ElementName                         PVAL008                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  LegislativeDataGroupId              PVAL009                   PVAL033                PVAL034                String   (null)        False     No              (null)                         (null) 
+  LegislativeDataGroupName            PVAL010                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  SourceSystemOwner                   PVAL012                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL013                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL014                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  MultipleEntryCount                  PVAL015                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  AssignmentId                        PVAL016                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  EntryType                           PVAL020                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  HrAssignmentId                      PVAL022                   PVAL031                PVAL032                Number       18 (null) False     No              PAY_ELEMENT_ENTRY_VALUES_F     (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  EmploymentId                        PVAL019                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  LegislationCode                     PVAL011                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  PersonId                            PVAL005                   PVAL027                PVAL028                String   (null)        False     No              (null)                         (null) 
+  RelationshipId                      PVAL018                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  TerminationId                       PVAL017                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  UsageLevel                          PVAL021                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectVersionNumber                 java.lang.Integer      PAY_ELEMENT_ENTRY_VALUES_F     OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  EntryTypeVA                         oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  Attribute Name                         DLoadUnsecureForeignSurrogate DLoadSpreadsheetHideAttribute DLoadSpreadsheetDisableLOV 
+  -------------------------------------- ----------------------------- ----------------------------- -------------------------- 
+  AssignmentId                           -                             X                             - 
+  ElementEntryId                         -                             X                             - 
+  ElementEntryValueId                    -                             X                             - 
+  ElementTypeId                          -                             X                             - 
+  HrAssignmentId                         -                             X                             - 
+  InputValueId                           -                             X                             - 
+  LegislativeDataGroupId                 -                             X                             - 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    LegislativeDataGroupName               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.legislativeDataGroups.publicView.LegislativeDataGroupPVO 
+                                           DLoadLOVDisplayAttributes        : [Name] 
+                                           DLoadLOVReturnAttributes         : Name 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGISLATIVE_DATA_GROUP_DATA__PER_LEGISLATIVE_DATA_GROUPS__LegislativeDataGroupPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.payrolls.elements.entries.protectedModel.entity.ElementEntryValueDEO 
+     Table/View             : PAY_ELEMENT_ENTRY_VALUES_F 
+     Updateable             : True 
+     Integration Object Name: ElementEntryValue 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PAY_ELEMENT_ENTRY_VALUES_F     HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  EffectiveEndDate 
+  EffectiveStartDate 
+  ElementEntryValueId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ElementEntryValueId 
+  Integration Object Name: ElementEntryValue 
+  User Keys 
+    [0] InputValueName, ElementName, LegislativeDataGroupName, EntryType, MultipleEntryCount, AssignmentNumber 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKVAL004, UKVAL005, UKVAL006 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    InputValueName                 PAY_INPUT_VALUES_VL            BASE_NAME                      DLoadSurrogateColumnMap 
+    ElementName                    PAY_ELEMENT_TYPES_F            BASE_ELEMENT_NAME              Parent VO 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           Parent VO 
+    EntryType                      PAY_ELEMENT_ENTRIES_F          ENTRY_TYPE                     Parent VO 
+    MultipleEntryCount             PAY_ELEMENT_ENTRIES_F          MULTIPLE_ENTRY_COUNT           Parent VO 
+    AssignmentNumber               PAY_REL_GROUPS_DN              ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : ElementEntryId 
+  Integration Object Name: ElementEntry 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: ElementEntryId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local 
+                             surrogate attribute on this component. 
+ 
+    [0] ElementName, LegislativeDataGroupName, EntryType, MultipleEntryCount, AssignmentNumber 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKVAL004, UKVAL005 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    ElementName                    PAY_ELEMENT_TYPES_F            BASE_ELEMENT_NAME              Parent VO 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           Parent VO 
+    EntryType                      PAY_ELEMENT_ENTRIES_F          ENTRY_TYPE                     Parent VO 
+    MultipleEntryCount             PAY_ELEMENT_ENTRIES_F          MULTIPLE_ENTRY_COUNT           Parent VO 
+    AssignmentNumber               PAY_REL_GROUPS_DN              ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : ElementTypeId 
+  Attribute Availability : Accepted 
+  Integration Object Name: ElementType 
+    Identified by        : DLoadForeignIntegration property [ElementType;ElementTypeId;PAY_ELEMENT_TYPES_F;ELEMENT_TYPE_ID] 
+  Referenced Table/View  : PAY_ELEMENT_TYPES_F 
+  Referenced Column      : ELEMENT_TYPE_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: ElementTypeId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate 
+                             attribute on this component. 
+ 
+    [0] ElementName, LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    ElementName 
+    LegislativeDataGroupName 
+ 
+  Attribute Name         : HrAssignmentId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Assignment 
+    Identified by        : DLoadForeignIntegration property [Assignment;AssignmentId;PER_ALL_ASSIGNMENTS_M;ASSIGNMENT_ID] 
+  Referenced Table/View  : PER_ALL_ASSIGNMENTS_M 
+  Referenced Column      : ASSIGNMENT_ID 
+  User Keys 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+  Attribute Name         : InputValueId 
+  Attribute Availability : Accepted 
+  Integration Object Name: InputValue 
+    Identified by        : DLoadForeignIntegration property [InputValue;InputValueId;PAY_INPUT_VALUES_F;INPUT_VALUE_ID] 
+                           EO association usage 
+  Referenced Table/View  : PAY_INPUT_VALUES_F 
+  Referenced Column      : INPUT_VALUE_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: InputValueId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local surrogate 
+                             attribute on this component. 
+ 
+    [0] InputValueName, ElementName, LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    InputValueName 
+    ElementName 
+    LegislativeDataGroupName 
+ 
+  Attribute Name         : LegislativeDataGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: LegislativeDataGroups 
+    Identified by        : Resolver VO + HRC_INTEGRATION_OBJECTS Registry Entry 
+  Referenced Table/View  : PER_LEGISLATIVE_DATA_GROUPS_VL 
+  Referenced Column      : LEGISLATIVE_DATA_GROUP_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKL-012: LegislativeDataGroupId - The local integration surrogate user key extract query annotations were applied incorrectly - not a local 
+                             surrogate attribute on this component. 
+ 
+    [0] LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : HDL Hidden 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId;PER_PERSONS;PERSON_ID] 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+    ** CAT 2 FAIL : SKF-004: PersonId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+ 
+  User Keys 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  Attribute Name         : AssignmentId 
+  Attribute Availability : Accepted 
+    Identified by        : User Key Only 
+  Referenced Table/View  : (null) 
+  Referenced Column      : (null) 
+ 
+  Attribute Name         : EmploymentId 
+  Attribute Availability : HDL Hidden 
+    Identified by        : User Key Only 
+  Referenced Table/View  : (null) 
+  Referenced Column      : (null) 
+ 
+  Attribute Name         : UsageLevel 
+  Attribute Availability : HDL Hidden 
+    Identified by        : User Key Only 
+  Referenced Table/View  : (null) 
+  Referenced Column      : (null) 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  EntryType                      PAY_ENTRY_TYPE 
+ 
+ 

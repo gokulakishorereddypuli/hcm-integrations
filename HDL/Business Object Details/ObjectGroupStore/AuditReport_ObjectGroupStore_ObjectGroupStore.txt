@@ -1,0 +1,240 @@
+================================================================================================================================= 
+Hierarchy Discriminator : ObjectGroupStore 
+Object Discriminator    : ObjectGroupStore 
+Version                 : V2 
+Hierarchy Level         : Top 
+Parent Discriminator    : (null) 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  None found. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Object Group Store 
+  UI_DESCRIPTION             : Object groups stores flexfield related information. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : ObjectGroupStore 
+  BUS_OBJ_FILE_DISCRIMINATOR : ObjectGroupStore 
+  PROCESSING_ORDER           : 150010 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : ORA_PAY_DEFINE 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.objectGroups.objectGroupServiceV2.view.ObjectGroupStoreVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : oracle.apps.hcm.objectGroups.objectGroupServiceV2.applicationModule.ObjectGroupServiceV2AM 
+  USING_APP_CONFIG           : ObjectGroupServiceV2AMLocal 
+  USING_APP_VIEWUSAGE_NAME   : ObjectGroupStore 
+  WS_CONNECTION_QNAME        : HcmDataLoaderPayrollService 
+  CALLBACK_CONNECTION_QNAME  : HcmDataLoaderEssCallbackService 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : No ** The data security classification for this object is unknown so spreadsheets based on this object cannot be shared with 
+                               business users for bulk loading. 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ObjectGroupStore 
+  Parent Object              : n/a 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : DFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ObjectGroupStoreId                  PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PAY_OBJECT_GROUP_STORE         OBJECT_GROUP_STORE_ID 
+  ObjectGroupId                       PVAL002                   PVAL010                PVAL011                Number       18 (null) True      For new records PAY_OBJECT_GROUP_STORE         OBJECT_GROUP_ID 
+  SequenceNumber                      PVAL003                   (null)                 (null)                 Number       18 (null) False     No              PAY_OBJECT_GROUP_STORE         SEQUENCE_NUMBER 
+  GUID                                PVAL004                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL005                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL006                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  ObjectGroupCode                     PVAL007                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  LegislativeDataGroupName            PVAL008                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  LegislativeDataGroupId              PVAL009                   PVAL012                PVAL013                Number       18 (null) False     No              PAY_OBJECT_GROUP_STORE         LEGISLATIVE_DATA_GROUP_ID 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectVersionNumber                 java.lang.Integer      PAY_OBJECT_GROUP_STORE         OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  ObjectGroupStoreDDF                 oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  Attribute Name                         DLoadUnsecureForeignSurrogate DLoadSpreadsheetHideAttribute DLoadSpreadsheetDisableLOV 
+  -------------------------------------- ----------------------------- ----------------------------- -------------------------- 
+  LegislativeDataGroupId                 -                             X                             - 
+  ObjectGroupId                          -                             X                             - 
+  ObjectGroupStoreId                     -                             X                             - 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    LegislativeDataGroupName               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.legislativeDataGroups.publicView.LegislativeDataGroupPVO 
+                                           DLoadLOVDisplayAttributes        : [Name] 
+                                           DLoadLOVReturnAttributes         : Name 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGISLATIVE_DATA_GROUP_DATA__PER_LEGISLATIVE_DATA_GROUPS__LegislativeDataGroupPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.objectGroups.protectedModel.entity.ObjectGroupStoreEO 
+     Table/View             : PAY_OBJECT_GROUP_STORE 
+     Updateable             : True 
+     Integration Object Name: ObjectGroupStore 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PAY_OBJECT_GROUP_STORE         HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ObjectGroupStoreId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ObjectGroupStoreId 
+  Integration Object Name: ObjectGroupStore 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode, SequenceNumber 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    LegislativeDataGroupName       PER_LEGISLATIVE_DATA_GROUPS_TL NAME                           DLoadAttributeTableAndColumn 
+    ObjectGroupCode                PAY_OBJECT_GROUPS_VL           BASE_OBJECT_GROUP_NAME         KeyHelper Resolver VO 
+    SequenceNumber                 PAY_OBJECT_GROUP_STORE         SEQUENCE_NUMBER                Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Not applicable, this is a top level component. 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : LegislativeDataGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: LegislativeDataGroups 
+    Identified by        : DLoadForeignIntegration property [LegislativeDataGroups;LegislativeDataGroupId;PER_LEGISLATIVE_DATA_GROUPS_VL;LEGISLATIVE_DATA_GROUP_ID] 
+  Referenced Table/View  : PER_LEGISLATIVE_DATA_GROUPS_VL 
+  Referenced Column      : LEGISLATIVE_DATA_GROUP_ID 
+  User Keys 
+    [0] LegislativeDataGroupName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+ 
+  Attribute Name         : ObjectGroupId 
+  Attribute Availability : Accepted 
+  Integration Object Name: ObjectGroup 
+    Identified by        : EO association usage + Referenced EO has IntegrationObjectName 
+  Referenced Table/View  : PAY_OBJECT_GROUPS_VL 
+  Referenced Column      : OBJECT_GROUP_ID 
+  User Keys 
+    [0] LegislativeDataGroupName, ObjectGroupCode 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegislativeDataGroupName 
+    ObjectGroupCode 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 
