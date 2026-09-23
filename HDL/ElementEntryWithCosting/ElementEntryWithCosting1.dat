@@ -1,0 +1,3 @@
+METADATA|ElementEntryWithCosting|EffectiveEndDate|EffectiveStartDate|ElementName|AssignmentNumber|EntryType|CreateEntrySequence|SourceSystemOwner|SourceSystemId|InputValueName1|ScreenEntryValue1|Segment4
+MERGE|ElementEntryWithCosting|2026/04/01|2026/04/01|Union Dues Amount|E77|E|1|PKG|11|Amount|2500|
+MERGE|ElementEntryWithCosting|2026/04/03|2026/04/03|Tipped Worker Hours|E78|E|2|PKG|12|Hours|12|
