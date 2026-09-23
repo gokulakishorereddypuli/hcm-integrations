@@ -1,0 +1,5 @@
+METADATA|ObjectGroupAmend|LegislativeDataGroupName|LegislativeDataGroupId|ObjectGroupCode|ObjectGroupId|ObjectGroupAmendId|ObjectGroupLevelName|ObjectCode|IncludeOrExclude|GUID|SourceSystemId|SourceSystemOwner
+MERGE|ObjectGroupAmend|US Legislative Data Group||PYRL_11|||Payroll Relationship|20|I||011|OIC_LAB
+MERGE|ObjectGroupAmend|US Legislative Data Group||PYRL_12|||Payroll Relationship|21|I||012|OIC_LAB
+MERGE|ObjectGroupAmend|US Legislative Data Group||PYRL_13|||Payroll Relationship|22|I||013|OIC_LAB
+MERGE|ObjectGroupAmend|US Legislative Data Group||PYRL_11|||Payroll Relationship|23|I||014|OIC_LAB

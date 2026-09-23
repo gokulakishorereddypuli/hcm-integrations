@@ -1,0 +1,4 @@
+METADATA,ObjectGroup,ObjectGroupId,ObjectGroupName,ObjectGroupTypeCode,LegislativeDataGroupName,StartDate,EndDate,StaticDynamicFlag,Description,LegislativeDataGroupId,ObjectGroupCode,GUID,SourceSystemId,SourceSystemOwner
+MERGE,ObjectGroup,,PYRL_11_20260901,Payroll Relationship Group,US Legislative Data Group,2026/09/01,2026/09/01,N,Employee Payroll Relationship Group,,PYRL_11,,11,OIC_LAB
+MERGE,ObjectGroup,,PYRL_12_20260901,Payroll Relationship Group,US Legislative Data Group,2026/09/01,2026/09/01,N,Employee Payroll Relationship Group,,PYRL_12,,12,OIC_LAB
+MERGE,ObjectGroup,,PYRL_13_20260901,Payroll Relationship Group,US Legislative Data Group,2026/09/01,2026/09/01,N,Employee Payroll Relationship Group,,PYRL_13,,13,OIC_LAB
